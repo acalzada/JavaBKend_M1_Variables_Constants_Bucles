@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+
+      // FASE 1
+      console.log("\n----------------------------------");
+      console.log("\t\tFASE 1");
+      console.log("----------------------------------");
+      var nom = new String("Angel");
+      var cognom1 = new String("Calzada");
+      var cognom2 = new String("Defez");
+      var dia = 28, mes = 10, any = 1982;
+      alert(cognom1 + " " + cognom2 + ", " + nom);
+      alert(dia + "/" + mes + "/" + any);
+
+      //FASE 2
+      console.log("\n----------------------------------");
+      console.log("\t\tFASE 2");
+      console.log("----------------------------------");
+      const ANY_TRESPAS = 1948;
+      const PERIODE = 4;
+      var nombreAnysTraspas = Math.ceil((any - ANY_TRESPAS)/PERIODE);
+      alert("Anys de traspas: " + nombreAnysTraspas);
+
+      //FASE 3
+      console.log("\n----------------------------------");
+      console.log("\t\tFASE 3");
+      console.log("----------------------------------");
+      var anyIdx = ANY_TRESPAS;
+      var anyDeTraspas = false;
+      var msgAnyTraspas = String("És un any de traspas!!!");
+      var msgAnyRegular = String("És un any sense pena ni gloria... :/");
+      for(anyIdx; anyIdx <= any; anyIdx++ ){
+
+        anyDeTraspas = Boolean(((anyIdx - ANY_TRESPAS)%4)==0);
+        if(anyDeTraspas)
+          console.log(anyIdx + ": " + msgAnyTraspas);
+        else
+          console.log(anyIdx + ": " + msgAnyRegular);
+      }
+
+        //FASE 4
+        console.log("\n----------------------------------");
+        console.log("\t\tFASE 4");
+        console.log("----------------------------------");
+        var nomComplert = nom + " " + cognom1 + " " + cognom2;
+        var dataNaixement = dia + "/" + mes + "/" + any;
+        console.log("El meu nom és " + nomComplert) ;
+        console.log("Vaig néixer el " + dataNaixement);
+        if (Boolean(((any-ANY_TRESPAS)%4)==0))
+          console.log("El meu any de naixement és de traspas.");
+        else
+          console.log("El meu any de naixement és un any regular. :(");
+
+      
+
+    </script>
+</html>
