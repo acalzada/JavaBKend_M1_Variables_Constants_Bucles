@@ -6,7 +6,8 @@
   </head>
 
   <body>
-    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+    <h1>M1 - Variables Constants Bucles</h1>
+    <p>Obrir la consola per veure els missatges.</p>
 
   </body>
 
@@ -40,13 +41,13 @@
       var anyDeTraspas = false;
       var msgAnyTraspas = String("És un any de traspas!!!");
       var msgAnyRegular = String("És un any sense pena ni gloria... :/");
+      
       for(anyIdx; anyIdx <= any; anyIdx++ ){
-
         anyDeTraspas = Boolean(((anyIdx - ANY_TRESPAS)%4)==0);
         if(anyDeTraspas)
-          console.log(anyIdx + ": " + msgAnyTraspas);
+          console.log("%c" + anyIdx + ": " + msgAnyTraspas, 'color:green');
         else
-          console.log(anyIdx + ": " + msgAnyRegular);
+          console.log("%c" + anyIdx + ": " + msgAnyRegular, 'color:red');
       }
 
         //FASE 4
@@ -58,9 +59,9 @@
         console.log("El meu nom és " + nomComplert) ;
         console.log("Vaig néixer el " + dataNaixement);
         if (Boolean(((any-ANY_TRESPAS)%4)==0))
-          console.log("El meu any de naixement és de traspas.");
+          console.log("%cEl meu any de naixement és de traspas.",'color:green');
         else
-          console.log("El meu any de naixement és un any regular. :(");
+          console.log("%cEl meu any de naixement és un any regular. :(",'color:red');
 
       
 
